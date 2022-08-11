@@ -25,6 +25,8 @@ Run this command to run the unit test
 npx jest
 ```
 
+![image](https://user-images.githubusercontent.com/35441828/184048559-ca930b50-f911-4bbe-b0cd-66ecfab60b79.png)
+
 
 
 Run this command to run the project
@@ -53,7 +55,7 @@ This API will just for testing purpose. When you try to call `http://localhost:3
 
 2.  `GET /newnumber`
 
-This API will generate new number. The t
+This API will generate new number.
 
 
 2.  `GET /allnumbers`
@@ -66,9 +68,3 @@ This API will return all generated number that available to be drawn.
 
 This API will return all winners from previous draw.
 
-
-## Limitation
-
-- No database included in this system, so when application is restarted, all the data will be lost. Need to add it.
-- Coverage of unit test is not 100%. Need to improve the testing.
-- No CI/CD command implemented
