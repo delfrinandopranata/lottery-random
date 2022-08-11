@@ -6,7 +6,7 @@ app.use(bodyParser.json());
 
 const lotteryNumbers = [];
 const lotteryWinners = [];
-const X_TIME = 60000;
+const X_TIME = 6000;
 const PORT = 3000;
 
 setInterval(() => {
@@ -21,10 +21,15 @@ app.get("/", (_, res) => {
     return res.json("LOTTERY");
 });
 
-app.get("/newnumber", (_, res) => {
-    const newNumber = uuid.v4()
-    lotteryNumbers.push(newNumber)
-    return res.json(newNumber);
+app.get("/newnumber", (req, res) => {
+    var ip = req.socket.remoteAddress.split(`:`).pop();
+    var index = lotteryNumbers.findIndex(x => x.user == ip); 
+    if(index === -1){
+      const newNumber = { user: ip, ticket: uuid.v4() }
+      lotteryNumbers.push(newNumber)
+      return res.json(newNumber);
+    }
+    return res.json("User already have a number");
 });
 
 app.get("/allnumbers", (_, res) => {

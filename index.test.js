@@ -27,7 +27,7 @@ describe("GET / ", () => {
 describe("GET /newnumber", () => {
   test("It should respond with unique number of ticket", async () => {
     const response = await request(app).get("/newnumber");
-    expect(response.body).toEqual("9134e286-6f71-427a-bf00-100000000000");
+    expect(response.body).toEqual({"ticket": "9134e286-6f71-427a-bf00-100000000000", "user": "127.0.0.1"});
     expect(response.statusCode).toBe(200);
   });
 });
@@ -35,7 +35,7 @@ describe("GET /newnumber", () => {
 describe("GET /allnumbers", () => {
   test("It should respond with list of all number", async () => {
     const response = await request(app).get("/allnumbers");
-    const allnumbers = ["9134e286-6f71-427a-bf00-100000000000"]
+    const allnumbers = [{"ticket": "9134e286-6f71-427a-bf00-100000000000", "user": "127.0.0.1"}]
     expect(response.body).toEqual(allnumbers);
     expect(response.statusCode).toBe(200);
   });
