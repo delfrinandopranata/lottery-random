@@ -64,4 +64,12 @@ describe("findWinner", () => {
     App.findWinner()
     expect(b).toBeCalled();
   });
+
+
+  test("It should respond with string 'LOTTERY'", async () => {
+    const b = jest.spyOn(App, 'findWinner') 
+    App.lotteryNumbers.length = 0
+    App.findWinner()
+    expect(b).toBeCalled();
+  });
 });
