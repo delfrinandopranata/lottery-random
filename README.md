@@ -25,7 +25,7 @@ Run this command to run the unit test
 npx jest
 ```
 
-![image](https://user-images.githubusercontent.com/35441828/184308076-b443dca6-323a-454b-b885-9cb15878e334.png)
+![image](https://user-images.githubusercontent.com/35441828/184317541-9a3e735a-2506-4d9d-85e2-d02b12efa49b.png)
 
 
 Run this command to run the project
