@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">85.18% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>23/27</span>
+                <span class='fraction'>33/33</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">75% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/2</span>
+                <span class='fraction'>3/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">83.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>5/6</span>
+                <span class='fraction'>7/7</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">84.61% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>22/26</span>
+                <span class='fraction'>31/31</span>
             </div>
         
             
@@ -104,7 +104,15 @@
 <a name='L39'></a><a href='#L39'>39</a>
 <a name='L40'></a><a href='#L40'>40</a>
 <a name='L41'></a><a href='#L41'>41</a>
-<a name='L42'></a><a href='#L42'>42</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -116,11 +124,28 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -129,21 +154,12 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require("express");
 const uuid = require('uuid');
@@ -153,25 +169,32 @@ app.use(bodyParser.json());
 &nbsp;
 const lotteryNumbers = [];
 const lotteryWinners = [];
-const X_TIME = 60000;
+const X_TIME = 6000;
 const PORT = 3000;
 &nbsp;
-setInterval(<span class="fstat-no" title="function not covered" >()</span> =&gt; {
-    const winner = <span class="cstat-no" title="statement not covered" >lotteryNumbers[Math.floor(Math.random()*lotteryNumbers.length)];</span>
-<span class="cstat-no" title="statement not covered" >    if(winner) {</span>
-<span class="cstat-no" title="statement not covered" >        lotteryWinners.push(winner)</span>
-<span class="cstat-no" title="statement not covered" >        lotteryNumbers.length = 0</span>
-    }
-}, X_TIME);
+const findWinner = () =&gt; {
+  const winner = lotteryNumbers[Math.floor(Math.random()*lotteryNumbers.length)];
+  <span class="missing-if-branch" title="else path not taken" >E</span>if(winner) {
+      lotteryWinners.push(winner)
+      lotteryNumbers.length = 0
+  }
+}
+&nbsp;
+setInterval(findWinner, X_TIME);
 &nbsp;
 app.get("/", (_, res) =&gt; {
     return res.json("LOTTERY");
 });
 &nbsp;
-app.get("/newnumber", (_, res) =&gt; {
-    const newNumber = uuid.v4()
-    lotteryNumbers.push(newNumber)
-    return res.json(newNumber);
+app.get("/newnumber", (req, res) =&gt; {
+    var ip = req.socket.remoteAddress.split(`:`).pop();
+    var index = lotteryNumbers.findIndex(x =&gt; x.user == ip); 
+    if(index === -1){
+      const newNumber = { user: ip, ticket: uuid.v4() }
+      lotteryNumbers.push(newNumber)
+      return res.json(newNumber);
+    }
+    return res.json("User already have a number");
 });
 &nbsp;
 app.get("/allnumbers", (_, res) =&gt; {
@@ -185,7 +208,8 @@ app.get("/winner", (_, res) =&gt; {
 app.listen(PORT, () =&gt; console.log(`server starting on port ${PORT}!`));
 &nbsp;
 module.exports = {
-    app
+    app,
+    findWinner
 };</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
@@ -193,7 +217,7 @@ module.exports = {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2022-08-11T00:51:15.080Z
+                at 2022-08-12T07:38:53.330Z
             </div>
         <script src="prettify.js"></script>
         <script>

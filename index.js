@@ -9,13 +9,15 @@ const lotteryWinners = [];
 const X_TIME = 6000;
 const PORT = 3000;
 
-setInterval(() => {
-    const winner = lotteryNumbers[Math.floor(Math.random()*lotteryNumbers.length)];
-    if(winner) {
-        lotteryWinners.push(winner)
-        lotteryNumbers.length = 0
-    }
-}, X_TIME);
+const findWinner = () => {
+  const winner = lotteryNumbers[Math.floor(Math.random()*lotteryNumbers.length)];
+  if(winner) {
+      lotteryWinners.push(winner)
+      lotteryNumbers.length = 0
+  }
+}
+
+setInterval(findWinner, X_TIME);
 
 app.get("/", (_, res) => {
     return res.json("LOTTERY");
@@ -43,5 +45,6 @@ app.get("/winner", (_, res) => {
 app.listen(PORT, () => console.log(`server starting on port ${PORT}!`));
 
 module.exports = {
-    app
+    app,
+    findWinner
 };
